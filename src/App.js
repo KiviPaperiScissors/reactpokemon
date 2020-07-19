@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'
+import PokeTable from './components/PokeTable'
 
-export default App;
+const pokemons = [
+  {
+    name: 'Pikkas',
+    attack: 109,
+    defense: 10,
+    hp: 43
+  },
+  {
+    name: 'Bubb',
+    attack: 1322,
+    defense: 1230,
+    hp: 343
+  }
+]
+
+const App = () => (
+  <div>
+    <h1>
+      Pokemon things!
+    </h1>
+    <PokeTable pokemons = {pokemons} />
+  </div>
+)
+
+
+export default App
